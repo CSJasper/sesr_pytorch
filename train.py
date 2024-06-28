@@ -164,6 +164,8 @@ if __name__ == '__main__':
                 desc='Validation',
             )
             for lr_imgs, hr_imgs in val_bar:
+                lr_imgs = lr_imgs.to('cuda')
+                hr_imgs = hr_imgs.to('cuda')
                 preds = model(lr_imgs)
                 psnr_values.append(psnr(hr_imgs, preds).item())
             avg_psnr = sum(psnr_values) / len(psnr_values)

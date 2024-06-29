@@ -1,7 +1,6 @@
 import os
 import numpy as np
 import torch
-import torchvision.transforms as transforms
 import random
 from torch.utils.data import Dataset, DataLoader
 from PIL import Image

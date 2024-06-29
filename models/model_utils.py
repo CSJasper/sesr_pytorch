@@ -146,7 +146,7 @@ class LinearBlock_c(nn.Module):
             for out_ch in range(self.out_filters):
                 residual[mid_kx, mid_ky, out_ch, out_ch] = 1.0
 
-        self.residual = torch.nn.Parameter(torch.tensor(residual), requires_grad=False)
+        self.residual = torch.nn.Parameter(torch.Tensor(residual), requires_grad=False)
 
     def init_wt_quant_ranges(self, kernel: torch.Tensor) -> None:
         quant_max, quant_min = compute_ranges(kernel, per_channel=True, symmetric=True)

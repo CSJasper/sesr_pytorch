@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0,3 python train.py --data_train DIV2K --data_test DIV2K --scale 2 --dir_data /database/hanni

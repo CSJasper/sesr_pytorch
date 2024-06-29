@@ -51,7 +51,7 @@ class SESR(nn.Module):
                                            num_inner_layers=1, 
                                            kernel_size=5, 
                                            padding='same', 
-                                           out_filters=config['scale']**2,
+                                           out_filters=config['scale'][0]**2,
                                            feature_size=config['feature_size'],
                                            quant_W=config['quant_W'],
                                            mode=mode)
